@@ -1,11 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-import Container from './Components/Container'
+import Yuvaraj from './Components/Yuvaraj';
+import {BrowserRouter,Route,Routes} from 'react-router-dom'
+import Container from './Components/Container';
 
 function App() {
   return (
    <>
-   <Container/>
+     <BrowserRouter>
+     <Routes>
+     <Routes path='/' element={<Yuvaraj/>}/>
+     <Routes path='/landingpage' element={<Container>}/>
+    </Routes>
+    </BrowserRouter>
    </>
     );
 }
